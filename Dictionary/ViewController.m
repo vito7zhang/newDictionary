@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIViewController+ShowText.h"
+#import "SearchViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *selectedSegmentControl;
@@ -79,7 +80,7 @@
 }
 
 -(void)addSubViewToKeyBackgroungView{
-    NSArray *array = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L   ",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
+    NSArray *array = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
     
     float buttonWidth = 35;
     
@@ -97,6 +98,8 @@
             [button setTitle:array[index] forState:UIControlStateNormal];
             button.frame = CGRectMake(j*(buttonWidth+lrPadding), (i+1)*tbPadding+i*buttonWidth, buttonWidth, buttonWidth);
             [button setTitleColor:COLORRGB(134, 35, 41) forState:UIControlStateNormal];
+            button.tag = index+1;
+            [button addTarget:self action:@selector(pinyinButtonAction:) forControlEvents:UIControlEventTouchUpInside];
             button.titleLabel.font = [UIFont systemFontOfSize:22];
             [self.pinYinBackgroundView addSubview:button];
             index++;
@@ -118,6 +121,8 @@
             [button setTitleColor:COLORRGB(134, 35, 41) forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:22];
             button.frame = CGRectMake((j+1)*lrPadding+j*buttonWidth, (i+1)*tbPadding+i*buttonWidth, buttonWidth, buttonWidth);
+            button.tag = i*6+j+1;
+            [button addTarget:self action:@selector(bushouButtonAction:) forControlEvents:UIControlEventTouchUpInside];
             [self.buShouBackgroundView addSubview:button];
         }
     }
@@ -144,8 +149,23 @@
     }
 }
 
+//最近搜索按钮绑定方法
 -(void)recentlySearchButtonAction:(UIButton *)sender{
     
+}
+//字母检索绑定方法
+-(void)pinyinButtonAction:(UIButton *)sender{
+    SearchViewController *searchVC = [SearchViewController new];
+    searchVC.isPinyin = YES;
+    searchVC.section = sender.tag;
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
+//部首检索绑定方法
+-(void)bushouButtonAction:(UIButton *)sender{
+    SearchViewController *searchVC = [SearchViewController new];
+    searchVC.isPinyin = NO;
+    searchVC.section = sender.tag;
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 
@@ -162,9 +182,7 @@
             return  YES;
         }
     }
-    
     [self showTextWithString:@"请输入单个汉字"];
-    
     return YES;
 }
 
