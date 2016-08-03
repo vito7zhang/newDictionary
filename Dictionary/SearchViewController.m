@@ -12,6 +12,7 @@
 #import "BushouModel.h"
 #import "SQLiteOperation.h"
 #import "IndexView.h"
+#import "ResultViewController.h"
 
 @interface SearchViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -79,6 +80,8 @@
     [self setLeftButton];
     [self setHomeButton];
     
+    self.title = self.isPinyin ? @"拼音检字" : @"部首检字";
+    
     if (self.isPinyin) {
         if (self.section == 9 || self.section == 22) {
             self.section++;
@@ -131,6 +134,20 @@
     }
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ResultViewController *resultVC = [ResultViewController new];
+    if (self.isPinyin) {
+        resultVC.isPinyin = YES;
+        resultVC.word = [(PinyinModel *)dataSource[indexPath.section][indexPath.row] pinyin];
+    }else{
+        resultVC.isPinyin = NO;
+        resultVC.bushou_id = [(BushouModel *)dataSource[indexPath.section][indexPath.row] bushou_id];
+        resultVC.word = [(BushouModel *)dataSource[indexPath.section][indexPath.row] bushou];
+    }
+    [self.navigationController pushViewController:resultVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

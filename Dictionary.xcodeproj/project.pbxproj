@@ -24,6 +24,10 @@
 		A0FE22371D51846400FF2E6E /* PinyinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE22361D51846400FF2E6E /* PinyinModel.m */; };
 		A0FE223A1D51846B00FF2E6E /* BushouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE22391D51846B00FF2E6E /* BushouModel.m */; };
 		A0FE223E1D518B8B00FF2E6E /* IndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE223D1D518B8B00FF2E6E /* IndexView.m */; };
+		A0FE22421D519C5600FF2E6E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE22411D519C5600FF2E6E /* ResultViewController.m */; };
+		A0FE22481D519CDE00FF2E6E /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE22461D519CDE00FF2E6E /* ResultTableViewCell.m */; };
+		A0FE22491D519CDE00FF2E6E /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FE22471D519CDE00FF2E6E /* ResultTableViewCell.xib */; };
+		A0FE224C1D51A1E300FF2E6E /* ResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FE224B1D51A1E300FF2E6E /* ResultModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,13 @@
 		A0FE22391D51846B00FF2E6E /* BushouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BushouModel.m; sourceTree = "<group>"; };
 		A0FE223C1D518B8B00FF2E6E /* IndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexView.h; sourceTree = "<group>"; };
 		A0FE223D1D518B8B00FF2E6E /* IndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexView.m; sourceTree = "<group>"; };
+		A0FE22401D519C5600FF2E6E /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		A0FE22411D519C5600FF2E6E /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		A0FE22451D519CDE00FF2E6E /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		A0FE22461D519CDE00FF2E6E /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
+		A0FE22471D519CDE00FF2E6E /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		A0FE224A1D51A1E300FF2E6E /* ResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultModel.h; sourceTree = "<group>"; };
+		A0FE224B1D51A1E300FF2E6E /* ResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultModel.m; sourceTree = "<group>"; };
 		E65AAC16EE0AEBEE1A9A1A8B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F272DEA11A8AE8B47B9AF175 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +217,9 @@
 		A0DFF3181D4EDE870040791A /* 结果页面 */ = {
 			isa = PBXGroup;
 			children = (
+				A0FE22441D519CC900FF2E6E /* Model */,
+				A0FE22431D519CC200FF2E6E /* View */,
+				A0FE223F1D519C4700FF2E6E /* ViewController */,
 			);
 			name = "结果页面";
 			sourceTree = "<group>";
@@ -274,6 +288,34 @@
 				A0FE223D1D518B8B00FF2E6E /* IndexView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A0FE223F1D519C4700FF2E6E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE22401D519C5600FF2E6E /* ResultViewController.h */,
+				A0FE22411D519C5600FF2E6E /* ResultViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A0FE22431D519CC200FF2E6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE22451D519CDE00FF2E6E /* ResultTableViewCell.h */,
+				A0FE22461D519CDE00FF2E6E /* ResultTableViewCell.m */,
+				A0FE22471D519CDE00FF2E6E /* ResultTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A0FE22441D519CC900FF2E6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE224A1D51A1E300FF2E6E /* ResultModel.h */,
+				A0FE224B1D51A1E300FF2E6E /* ResultModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F6561D1C66C532C2A3758110 /* Frameworks */ = {
@@ -390,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FE22491D519CDE00FF2E6E /* ResultTableViewCell.xib in Resources */,
 				A0DFF31C1D4EDF5A0040791A /* aaaaa2.sqlite in Resources */,
 				A0DFF2F31D4EDD140040791A /* LaunchScreen.storyboard in Resources */,
 				A0DFF2F01D4EDD140040791A /* Assets.xcassets in Resources */,
@@ -470,7 +513,10 @@
 				A0FE223E1D518B8B00FF2E6E /* IndexView.m in Sources */,
 				A0DFF3221D4EEBF00040791A /* UIViewController+ShowText.m in Sources */,
 				A0DFF2EB1D4EDD140040791A /* ViewController.m in Sources */,
+				A0FE22421D519C5600FF2E6E /* ResultViewController.m in Sources */,
+				A0FE224C1D51A1E300FF2E6E /* ResultModel.m in Sources */,
 				A0FE222D1D517CF900FF2E6E /* SearchViewController.m in Sources */,
+				A0FE22481D519CDE00FF2E6E /* ResultTableViewCell.m in Sources */,
 				A0FE22301D517E3100FF2E6E /* SQLiteOperation.m in Sources */,
 				A0DFF2E81D4EDD140040791A /* AppDelegate.m in Sources */,
 				A0FE223A1D51846B00FF2E6E /* BushouModel.m in Sources */,
