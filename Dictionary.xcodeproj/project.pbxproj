@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		89946C07CD4599F49324C074 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF547C9A8384966CA07C305 /* libPods.a */; };
+		A00351BF1D52DFEA00B734A9 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351BE1D52DFEA00B734A9 /* iflyMSC.framework */; };
+		A00351C11D52E15F00B734A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351C01D52E15F00B734A9 /* Foundation.framework */; };
+		A00351C31D52E16400B734A9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351C21D52E16400B734A9 /* libz.tbd */; };
+		A00351C51D52E16A00B734A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351C41D52E16A00B734A9 /* UIKit.framework */; };
+		A00351C71D52E18700B734A9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351C61D52E18700B734A9 /* CoreTelephony.framework */; };
+		A00351C91D52E18C00B734A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351C81D52E18C00B734A9 /* AVFoundation.framework */; };
+		A00351CB1D52E19200B734A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351CA1D52E19200B734A9 /* CoreLocation.framework */; };
+		A00351CD1D52E19C00B734A9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351CC1D52E19B00B734A9 /* AudioToolbox.framework */; };
+		A00351CF1D52E1A400B734A9 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351CE1D52E1A400B734A9 /* AddressBook.framework */; };
+		A00351D11D52E1AF00B734A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D01D52E1AF00B734A9 /* CoreGraphics.framework */; };
+		A00351D31D52E1C400B734A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D21D52E1C400B734A9 /* QuartzCore.framework */; };
+		A00351D51D52E1CE00B734A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D41D52E1CE00B734A9 /* SystemConfiguration.framework */; };
 		A0DFF2E51D4EDD140040791A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2E41D4EDD140040791A /* main.m */; };
 		A0DFF2E81D4EDD140040791A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2E71D4EDD140040791A /* AppDelegate.m */; };
 		A0DFF2EB1D4EDD140040791A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2EA1D4EDD140040791A /* ViewController.m */; };
@@ -49,6 +61,18 @@
 
 /* Begin PBXFileReference section */
 		4FF547C9A8384966CA07C305 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00351BE1D52DFEA00B734A9 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = Dictionary/lib/iflyMSC.framework; sourceTree = "<group>"; };
+		A00351C01D52E15F00B734A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A00351C21D52E16400B734A9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A00351C41D52E16A00B734A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A00351C61D52E18700B734A9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A00351C81D52E18C00B734A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A00351CA1D52E19200B734A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A00351CC1D52E19B00B734A9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A00351CE1D52E1A400B734A9 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A00351D01D52E1AF00B734A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A00351D21D52E1C400B734A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A00351D41D52E1CE00B734A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A0DFF2E01D4EDD130040791A /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFF2E41D4EDD140040791A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0DFF2E61D4EDD140040791A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +121,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00351D51D52E1CE00B734A9 /* SystemConfiguration.framework in Frameworks */,
+				A00351D31D52E1C400B734A9 /* QuartzCore.framework in Frameworks */,
+				A00351D11D52E1AF00B734A9 /* CoreGraphics.framework in Frameworks */,
+				A00351CF1D52E1A400B734A9 /* AddressBook.framework in Frameworks */,
+				A00351CD1D52E19C00B734A9 /* AudioToolbox.framework in Frameworks */,
+				A00351CB1D52E19200B734A9 /* CoreLocation.framework in Frameworks */,
+				A00351C91D52E18C00B734A9 /* AVFoundation.framework in Frameworks */,
+				A00351C71D52E18700B734A9 /* CoreTelephony.framework in Frameworks */,
+				A00351C51D52E16A00B734A9 /* UIKit.framework in Frameworks */,
+				A00351C31D52E16400B734A9 /* libz.tbd in Frameworks */,
+				A00351C11D52E15F00B734A9 /* Foundation.framework in Frameworks */,
+				A00351BF1D52DFEA00B734A9 /* iflyMSC.framework in Frameworks */,
 				89946C07CD4599F49324C074 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +357,18 @@
 		F6561D1C66C532C2A3758110 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A00351D41D52E1CE00B734A9 /* SystemConfiguration.framework */,
+				A00351D21D52E1C400B734A9 /* QuartzCore.framework */,
+				A00351D01D52E1AF00B734A9 /* CoreGraphics.framework */,
+				A00351CE1D52E1A400B734A9 /* AddressBook.framework */,
+				A00351CC1D52E19B00B734A9 /* AudioToolbox.framework */,
+				A00351CA1D52E19200B734A9 /* CoreLocation.framework */,
+				A00351C81D52E18C00B734A9 /* AVFoundation.framework */,
+				A00351C61D52E18700B734A9 /* CoreTelephony.framework */,
+				A00351C41D52E16A00B734A9 /* UIKit.framework */,
+				A00351C21D52E16400B734A9 /* libz.tbd */,
+				A00351C01D52E15F00B734A9 /* Foundation.framework */,
+				A00351BE1D52DFEA00B734A9 /* iflyMSC.framework */,
 				4FF547C9A8384966CA07C305 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -665,6 +713,11 @@
 			baseConfigurationReference = F272DEA11A8AE8B47B9AF175 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dictionary/lib",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -678,6 +731,11 @@
 			baseConfigurationReference = E65AAC16EE0AEBEE1A9A1A8B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dictionary/lib",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dictionary/PrefixHeader.pch";
 				INFOPLIST_FILE = Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

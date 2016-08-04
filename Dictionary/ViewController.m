@@ -157,14 +157,14 @@
 -(void)pinyinButtonAction:(UIButton *)sender{
     SearchViewController *searchVC = [SearchViewController new];
     searchVC.isPinyin = YES;
-    searchVC.section = sender.tag;
+    searchVC.section = (int)sender.tag;
     [self.navigationController pushViewController:searchVC animated:YES];
 }
 //部首检索绑定方法
 -(void)bushouButtonAction:(UIButton *)sender{
     SearchViewController *searchVC = [SearchViewController new];
     searchVC.isPinyin = NO;
-    searchVC.section = sender.tag;
+    searchVC.section = (int)sender.tag;
     [self.navigationController pushViewController:searchVC animated:YES];
 }
 
