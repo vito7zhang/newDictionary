@@ -12,6 +12,7 @@
 #import "BushouModel.h"
 
 FMDatabase *db = nil;
+FMDatabase *collectionDB = nil;
 @implementation SQLiteOperation
 
 +(NSArray *)findAllPinyin{
@@ -44,10 +45,58 @@ FMDatabase *db = nil;
 }
 
 
++(BOOL)createDataBase{
+    NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)firstObject]stringByAppendingString:@"/collection.sqlite"];
+    collectionDB = [FMDatabase databaseWithPath:dbPath];
+    [collectionDB open];
+    BOOL isSuccess = [collectionDB executeUpdate:@"create table if not exists CollectionTable(simp text,pinyin text,zhuyin text,tra text,frame text,bushou text,bsnum text,num text,seq text,base text,hanyu text,idiom text,english text)"];
+    return isSuccess;
+}
 
++(BOOL)insertModel:(WordModel *)model{
+    BOOL isSuccess = [self createDataBase];
+    if (isSuccess) {
+        BOOL inser = [collectionDB executeUpdate:@"insert or replace into CollectionTable(simp,pinyin,zhuyin,tra,frame,bushou,bsnum,num,seq,base,hanyu,idiom,english)values(?,?,?,?,?,?,?,?,?,?,?,?,?)",model.simp,model.pinyin,model.zhuyin,model.tra,model.frame,model.bushou,model.bsnum,model.num,model.seq,model.base,model.hanyu,model.idiom,model.english];
+        return inser;
+    }
+    return NO;
+}
 
++(BOOL)deleteModel:(WordModel *)model{
+    BOOL isSuccess = [self createDataBase];
+    if (isSuccess) {
+        BOOL delete = [collectionDB executeUpdate:@"delete from CollectionTable where simp = ?",model.simp];
+        return delete;
+    }
+    return NO;
+}
 
-
++(NSArray *)findALLCollection{
+    NSMutableArray *mArray = [NSMutableArray array];
+    BOOL isSuccess = [self createDataBase];
+    if (isSuccess) {
+        FMResultSet *set = [collectionDB executeQuery:@"select * from CollectionTable"];
+        while ([set next]) {
+            WordModel *m = [WordModel new];
+            m.simp = [set stringForColumn:@"simp"];
+            m.zhuyin = [set stringForColumn:@"zhuyin"];
+            m.pinyin = [set stringForColumn:@"pinyin"];
+            m.bushou = [set stringForColumn:@"bushou"];
+            m.tra = [set stringForColumn:@"tra"];
+            m.frame = [set stringForColumn:@"frame"];
+            m.bsnum = [set stringForColumn:@"bsnum"];
+            m.num = [set stringForColumn:@"num"];
+            m.seq = [set stringForColumn:@"seq"];
+            m.base = [set stringForColumn:@"base"];
+            m.hanyu = [set stringForColumn:@"hanyu"];
+            m.idiom = [set stringForColumn:@"idiom"];
+            m.english = [set stringForColumn:@"english"];
+            [mArray addObject:m];
+        }
+        return mArray;
+    }
+    return nil;
+}
 
 
 @end

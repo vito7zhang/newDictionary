@@ -20,6 +20,11 @@
 		A00351D11D52E1AF00B734A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D01D52E1AF00B734A9 /* CoreGraphics.framework */; };
 		A00351D31D52E1C400B734A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D21D52E1C400B734A9 /* QuartzCore.framework */; };
 		A00351D51D52E1CE00B734A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00351D41D52E1CE00B734A9 /* SystemConfiguration.framework */; };
+		A00351DA1D52EE8A00B734A9 /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00351D81D52EE8A00B734A9 /* WordViewController.m */; };
+		A00351DB1D52EE8A00B734A9 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00351D91D52EE8A00B734A9 /* WordViewController.xib */; };
+		A00351DF1D52F63A00B734A9 /* WordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A00351DE1D52F63A00B734A9 /* WordModel.m */; };
+		A00351E31D531FBF00B734A9 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00351E21D531FBF00B734A9 /* MoreViewController.m */; };
+		A00351E61D53212300B734A9 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00351E51D53212300B734A9 /* MyCollectionViewController.m */; };
 		A0DFF2E51D4EDD140040791A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2E41D4EDD140040791A /* main.m */; };
 		A0DFF2E81D4EDD140040791A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2E71D4EDD140040791A /* AppDelegate.m */; };
 		A0DFF2EB1D4EDD140040791A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DFF2EA1D4EDD140040791A /* ViewController.m */; };
@@ -73,6 +78,15 @@
 		A00351D01D52E1AF00B734A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A00351D21D52E1C400B734A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A00351D41D52E1CE00B734A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A00351D71D52EE8A00B734A9 /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
+		A00351D81D52EE8A00B734A9 /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
+		A00351D91D52EE8A00B734A9 /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
+		A00351DD1D52F63A00B734A9 /* WordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordModel.h; sourceTree = "<group>"; };
+		A00351DE1D52F63A00B734A9 /* WordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordModel.m; sourceTree = "<group>"; };
+		A00351E11D531FBF00B734A9 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		A00351E21D531FBF00B734A9 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		A00351E41D53212300B734A9 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
+		A00351E51D53212300B734A9 /* MyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewController.m; sourceTree = "<group>"; };
 		A0DFF2E01D4EDD130040791A /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DFF2E41D4EDD140040791A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0DFF2E61D4EDD140040791A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +177,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A00351D61D52EE5E00B734A9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A00351D71D52EE8A00B734A9 /* WordViewController.h */,
+				A00351D81D52EE8A00B734A9 /* WordViewController.m */,
+				A00351D91D52EE8A00B734A9 /* WordViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A00351DC1D52F62D00B734A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A00351DD1D52F63A00B734A9 /* WordModel.h */,
+				A00351DE1D52F63A00B734A9 /* WordModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A00351E01D531FA100B734A9 /* 更多页面 */ = {
+			isa = PBXGroup;
+			children = (
+				A00351E11D531FBF00B734A9 /* MoreViewController.h */,
+				A00351E21D531FBF00B734A9 /* MoreViewController.m */,
+				A00351E41D53212300B734A9 /* MyCollectionViewController.h */,
+				A00351E51D53212300B734A9 /* MyCollectionViewController.m */,
+			);
+			name = "更多页面";
+			sourceTree = "<group>";
+		};
 		A0DFF2D71D4EDD130040791A = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +237,7 @@
 				A0DFF2E61D4EDD140040791A /* AppDelegate.h */,
 				A0DFF2E71D4EDD140040791A /* AppDelegate.m */,
 				A0DFF31B1D4EDF5A0040791A /* aaaaa2.sqlite */,
+				A00351E01D531FA100B734A9 /* 更多页面 */,
 				A0DFF3191D4EDE8D0040791A /* 具体页面 */,
 				A0DFF3181D4EDE870040791A /* 结果页面 */,
 				A0DFF3171D4EDE7F0040791A /* 搜索页面 */,
@@ -263,6 +308,8 @@
 		A0DFF3191D4EDE8D0040791A /* 具体页面 */ = {
 			isa = PBXGroup;
 			children = (
+				A00351DC1D52F62D00B734A9 /* Model */,
+				A00351D61D52EE5E00B734A9 /* ViewController */,
 			);
 			name = "具体页面";
 			sourceTree = "<group>";
@@ -480,6 +527,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00351DB1D52EE8A00B734A9 /* WordViewController.xib in Resources */,
 				A0FE22491D519CDE00FF2E6E /* ResultTableViewCell.xib in Resources */,
 				A0DFF31C1D4EDF5A0040791A /* aaaaa2.sqlite in Resources */,
 				A0DFF2F31D4EDD140040791A /* LaunchScreen.storyboard in Resources */,
@@ -558,17 +606,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0FE22371D51846400FF2E6E /* PinyinModel.m in Sources */,
+				A00351E31D531FBF00B734A9 /* MoreViewController.m in Sources */,
 				A0FE223E1D518B8B00FF2E6E /* IndexView.m in Sources */,
 				A0DFF3221D4EEBF00040791A /* UIViewController+ShowText.m in Sources */,
 				A0DFF2EB1D4EDD140040791A /* ViewController.m in Sources */,
 				A0FE22421D519C5600FF2E6E /* ResultViewController.m in Sources */,
 				A0FE224C1D51A1E300FF2E6E /* ResultModel.m in Sources */,
+				A00351E61D53212300B734A9 /* MyCollectionViewController.m in Sources */,
 				A0FE222D1D517CF900FF2E6E /* SearchViewController.m in Sources */,
 				A0FE22481D519CDE00FF2E6E /* ResultTableViewCell.m in Sources */,
+				A00351DA1D52EE8A00B734A9 /* WordViewController.m in Sources */,
 				A0FE22301D517E3100FF2E6E /* SQLiteOperation.m in Sources */,
 				A0DFF2E81D4EDD140040791A /* AppDelegate.m in Sources */,
 				A0FE223A1D51846B00FF2E6E /* BushouModel.m in Sources */,
 				A0FE22331D51824C00FF2E6E /* UIViewController+SetNavigationBar.m in Sources */,
+				A00351DF1D52F63A00B734A9 /* WordModel.m in Sources */,
 				A0DFF2E51D4EDD140040791A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

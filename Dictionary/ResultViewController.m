@@ -13,6 +13,7 @@
 #import <MBProgressHUD.h>
 #import <MJRefresh.h>
 #import <iflyMSC/iflyMSC.h>
+#import "WordViewController.h"
 
 @interface ResultViewController ()<UITableViewDelegate,UITableViewDataSource,IFlySpeechSynthesizerDelegate>
 {
@@ -47,6 +48,8 @@
     [myTableView registerNib:[UINib nibWithNibName:@"ResultTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([ResultTableViewCell class])];
     myTableView.backgroundColor = [UIColor clearColor];
     myTableView.rowHeight = 80;
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(initData)];
     myTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(moreData)];
@@ -153,6 +156,14 @@
     cell.bihuaLabel.text = [NSString stringWithFormat:@"笔画：%@",m.bihua];
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    WordViewController *wordVC = [WordViewController new];
+    wordVC.word = [(ResultModel *)dataSource[indexPath.row] simp];
+    [self.navigationController pushViewController:wordVC animated:YES];
+}
+
+#pragma mark 发音
 
 -(void)loudAction:(UIButton *)sender{
     // 创建合成对象，为单例模式

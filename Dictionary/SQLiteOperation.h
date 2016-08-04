@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WordModel.h"
 
 @interface SQLiteOperation : NSObject
 +(NSArray *)findAllPinyin;
 +(NSArray *)findAllBushou;
 
-
-
++(BOOL)insertModel:(WordModel *)model;
++(BOOL)deleteModel:(WordModel *)model;
++(NSArray *)findALLCollection;
 
 
 

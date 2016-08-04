@@ -72,6 +72,9 @@
                     <navigationItem key="navigationItem" id="1R8-id-Jz8">
                         <barButtonItem key="rightBarButtonItem" image="more" id="wA5-VZ-gfa">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="moreBarButtonItemAction:" destination="BYZ-38-t0r" id="WzT-br-bhI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>

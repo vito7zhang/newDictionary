@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UIViewController+ShowText.h"
 #import "SearchViewController.h"
+#import "MoreViewController.h"
+#import "WordViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *selectedSegmentControl;
@@ -186,6 +188,9 @@
     return YES;
 }
 
+- (IBAction)moreBarButtonItemAction:(UIBarButtonItem *)sender {
+    [self.navigationController pushViewController:[MoreViewController new] animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {
